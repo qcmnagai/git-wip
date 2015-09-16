@@ -89,7 +89,7 @@ func (cli *CLI) Run(args []string) int {
 			return ExitCodeError
 		}
 		// create commit
-		cmd = "git commit -m 'empty' --allow-empty";
+		cmd = "git commit -m '[ci skip] empty' --allow-empty";
 		_, err = exec.Command(os.Getenv("SHELL"), "-c", cmd).Output()
 		if err != nil {
 			return ExitCodeError
