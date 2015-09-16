@@ -78,7 +78,7 @@ func (cli *CLI) Run(args []string) int {
 		return ExitCodeError
 	}
 	issueNumber = i
-	issueComment = strings.TrimRight(fmt.Sprintf("%s", out), "\n")
+	issueComment = strings.TrimSpace(strings.TrimRight(fmt.Sprintf("%s", out), "\n"))
 
 	// create branch
 	if c != "" {
