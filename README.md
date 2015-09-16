@@ -2,7 +2,25 @@
 
 ## Description
 
+github上でWIP (Work In Progress) 用のPull-Requestを簡単に作成する為のGitのサブコマンドです。
+以下のことを自動で実行してくれます。
+
+- origin/masterから新しくブランチを作成してリモートにプッシュ（Optional）
+- 下記フォーマットのPull-Requestを作成する
+    - タイトル: ```wip <Issue Title> (closes #<Issue Number>) ```
+    - コメント: ```ref. #<Issue Number>```
+
 ## Usage
+
+既にPull-Request用のブランチがリモート＆ローカル上に存在している場合
+```
+git wip -i [issue number] -b [branch name]
+```
+
+新しくPull-Request用のブランチを作成する場合
+```
+git wip -i [issue number] -c [new branch name]
+```
 
 ## Install
 
