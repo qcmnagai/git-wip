@@ -1,5 +1,5 @@
 # git-wip
-[![Circle CI](https://circleci.com/gh/:user/:repo/tree/master.svg?style=shield)](https://circleci.com/gh/:user/:repo/tree/master)
+[![Circle CI](https://circleci.com/gh/qcmnagai/git-wip/tree/master.svg?style=shield)](https://circleci.com/gh/qcmnagai/git-wip/tree/master.svg?style=shield)
 
 ## Description
 
