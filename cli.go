@@ -95,14 +95,20 @@ func (cli *CLI) Run(args []string) int {
 			return ExitCodeError
 		}
 		// push
-		cmd = fmt.Sprintf("git push origin %s", c);
+		cmd = fmt.Sprintf("git push -u origin %s", c);
 		_, err = exec.Command(os.Getenv("SHELL"), "-c", cmd).Output()
 		if err != nil {
 			return ExitCodeError
 		}
-	} else if b != ""{
+	} else if b != "" {
 		// checkout
 		cmd = fmt.Sprintf("git checkout %s", b);
+		_, err = exec.Command(os.Getenv("SHELL"), "-c", cmd).Output()
+		if err != nil {
+			return ExitCodeError
+		}
+		// push
+		cmd = fmt.Sprintf("git push -u origin %s", b);
 		_, err = exec.Command(os.Getenv("SHELL"), "-c", cmd).Output()
 		if err != nil {
 			return ExitCodeError
